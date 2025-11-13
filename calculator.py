@@ -1,3 +1,7 @@
+# https://github.com/asjchat/lab11-AC-BA
+# Partner 1: Ananda Chatterjee
+# Partner 2: Brayden Allen
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
