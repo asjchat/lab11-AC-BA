@@ -1,3 +1,7 @@
+# https://github.com/asjchat/lab11-AC-BA
+# Partner 1: Ananda Chatterjee
+# Partner 2: Brayden Allen
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -25,19 +29,21 @@ def div(a, b):
 def log(a, b):
     if a <= 0:
         raise ValueError
-    math.log(b, a)
+    return math.log(b, a)
 
 def exp(a, b):
     return a**b
 
-
 def square_root(a):
     if a < 0:
         raise ValueError("Error")
-    math.sqrt(a)
+    return math.sqrt(a)
 
 def hypotenuse(a, b):
-    math.hypot(a, b) # can have negative nums
+    return math.hypot(a, b) # can have negative nums
 
+def subtract():
+    return
 
-
+def logarithm():
+    return
