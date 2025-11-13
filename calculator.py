@@ -1,7 +1,3 @@
-# https://github.com/asjchat/lab11-AC-BA
-# Partner 1: Ananda Chatterjee
-# Partner 2: Brayden Allen
-
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -22,15 +18,13 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    if b == 0:
-        raise ZeroDivisionError("Error")
-    return a / b
+    if a == 0:
+        raise ZeroDivisionError
+    return b / a
 
 def log(a, b):
-    if a <= 0 or a == 1:
-        raise ValueError("Error")
-    if b <= 0:
-        raise ValueError("Error")
+    if a <= 0:
+        raise ValueError
     math.log(b, a)
 
 def exp(a, b):

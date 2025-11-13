@@ -6,6 +6,26 @@ import unittest
 from calculator import *
 
 class TestCalculator(unittest.TestCase):
+    def test_add(self): # 3 assertions
+        self.assertEqual(add(5, 4), 9)
+        self.assertEqual(add(5, -4), 1)
+        self.assertEqual(add(-5, -4), -9)
+
+    def test_subtract(self): # 3 assertions
+        self.assertEqual(add(5, 4), 1)
+        self.assertEqual(add(5, -4), 9)
+        self.assertEqual(add(-5, -4), -1)
+
+    def test_divide_by_zero(self): # 1 assertion
+        self.assertRaises(ZeroDivisionError, div(10, 0))
+
+    def test_logarithm(self): # 3 assertions
+        self.assertEqual(log(10, 10), 1)
+        self.assertEqual(add(10, 100), 2)
+        self.assertEqual(add(10, 1), 0)
+
+    def test_log_invalid_base(self): # 1 assertion
+        self.assertRaises(ValueError, log(1, 1))
 
     def test_multiply(self): # 3 assertions
         self.assertEqual(mul(1, 2), 2)
@@ -18,21 +38,25 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             div(1, 0)
 
-
-
-    def test_log_invalid_base(self): # 1 assertion
-        with self.assertRaises(ValueError):
-            log(1, 10)
-
     def test_log_invalid_argument(self): # 1 assertion
         with self.assertRaises(ValueError):
             log(10, -5)
+
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(mul(1, 2), 2)
+        self.assertEqual(mul(0, 10), 0)
+        self.assertEqual(mul(-10, 10), -100)
+
+    def test_divide(self): # 3 assertions  fill in code
+        self.assertEqual(div(10, 2), 5)
+        self.assertEqual(div(-50, 5), -10)
+        with self.assertRaises(ZeroDivisionError):
+            div(1, 0)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
         self.assertAlmostEqual(hypotenuse(5, 12), 13)
         self.assertAlmostEqual(hypotenuse(1, 1), math.sqrt(2))
-
 
     def test_sqrt(self): # 3 assertions
         with self.assertRaises(ValueError):
