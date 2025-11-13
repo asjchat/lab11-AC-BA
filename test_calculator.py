@@ -37,7 +37,7 @@ class TestCalculator(unittest.TestCase):
     def test_sqrt(self): # 3 assertions
         with self.assertRaises(ValueError):
             square_root(-1)
-            self.assertEqual(square_root(9), 3)
+        self.assertEqual(square_root(9), 3)
         self.assertAlmostEqual(square_root(2), math.sqrt(2))
 
 # Do not touch this
