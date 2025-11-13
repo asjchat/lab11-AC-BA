@@ -22,16 +22,16 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    if a == 0:
+    if b == 0:
         raise ZeroDivisionError
-    return b / a
+    return a / b
 
 def logarithm(a, b):
     if a <= 0 or a == 1:
         raise ValueError
     if b <= 0:
         raise ValueError
-    math.log(b, a)
+    return math.log(b, a)
 
 def exp(a, b):
     return a**b
@@ -40,10 +40,10 @@ def exp(a, b):
 def square_root(a):
     if a < 0:
         raise ValueError("Error")
-    math.sqrt(a)
+    return math.sqrt(a)
 
 def hypotenuse(a, b):
-    math.hypot(a, b) # can have negative nums
+    return math.hypot(a, b) # can have negative nums
 
 
 
